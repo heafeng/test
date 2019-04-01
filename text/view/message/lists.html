@@ -1,0 +1,53 @@
+<?php randerTmp('header'); ?>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">留言管理</h1>
+    <div class="table-responsive">
+	<div>
+		<a href="index.php?c=message&a=add" class="btn btn-default">新增</a>
+	</div>
+	<div>
+		<form action="index.php?c=message&a=lists" method="get" class="navbar-form navbar-right">
+			用户的id<input type="text" name="user_id" value="<?php echo $user_id; ?>" class="form-control">
+			用户的名称<input type="text" name="username" value="<?php echo $username; ?>"  class="form-control">
+			内容<input type="text" name="content" value="<?php echo $content; ?>" class="form-control">
+			<input type="submit" name="" value="搜索" class="form-control">
+		</form>
+	</div>
+	    <?php if (empty($result)) { ?>
+		<div>
+		    暂无内容
+		</div>
+		<?php } else { ?>
+	<table class="table table-striped">
+	<tr>
+		<td>id</td>
+		<td>username</td>
+		<td>img</td>
+		<td>content</td>
+		<td>createtime</td>
+		<td>handle</td>
+	</tr>
+	<?php foreach($result as $k=>$v){ ?>
+	<tr>
+		<td><?php echo $v['id']; ?></td>
+		<td><?php echo $v['username']; ?></td>
+		<td><img src="<?php echo $v['img']; ?>" alt="无图片" width="100" height="auto"></td>
+		<td><?php echo $v['content']; ?></td>
+		<td><?php echo date ('Y-m-d H:i:s',$v['createtime']); ?></td>
+		<td><a href="index.php?c=message&a=delate&id=<?php echo $v['id']?>">删除</a>
+		<a href="index.php?c=message&a=update&id=<?php echo $v['id']?>">修改</a></td>
+
+	</tr>
+	<?php } ?>
+	</table>
+	<?php } ?>
+	<div>
+	    <!-- <ul>
+	        <?php for($i=1; $i<=$pageNum;$i++) { ?>
+	        <li <?php if ($i == $p) {?> style="background: #ff0000" <?php } ?> ><a href="index.php?c=message&a=lists&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+	        <?php } ?>
+	    </ul> -->
+	</div>
+    </div>
+</div>
+<?php randerTmp('footer'); ?>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="btn">展示</div>
+<div>
+    <ul>
+
+    </ul>
+</div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.btn').click(function(){
+            $.ajax({
+                url : "index.php?c=message&a=test",
+                type : "post",
+                dataType : "json",
+                data : {'id':123},
+                success :function (r) {
+                    console.log(r);
+                    var li = '';
+                    for(var i in r.data.message) {
+                        li += "<li>"+r.data.message[i].content+"</li>"
+                    }
+                    $('ul').html(li);
+                },
+                error: function(){
+
+                }
+            });
+        })
+    })
+</script>
+</body>
+</html>

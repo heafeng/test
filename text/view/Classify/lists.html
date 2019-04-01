@@ -1,0 +1,56 @@
+<?php randerTmp('header'); ?>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">类型管理</h1>
+    <div class="table-responsive">
+	<div>
+		<a href="index.php?c=classify&a=add" class="btn btn-default">新增分类</a>
+	</div>
+	    <?php if (empty($result)) { ?>
+		<div>
+		    暂无内容
+		</div>
+		<?php } else { ?>
+	<table class="table table-striped">
+	<tr>
+		<td>id</td>
+		<td>name</td>
+		<td>pid</td>
+		<td>handle</td>
+</tr>
+	</tr>
+	<?php foreach($result as $k=>$v){ ?>
+	<tr>
+		<td><?php echo $v['id']; ?></td>
+		<td><?php echo $v['name']; ?></td>
+		<td><?php echo $v['pid']; ?></td>
+		<td><a href="index.php?c=message&a=delate&id=<?php echo $v['id']?>">删除</a>
+		<a href="index.php?c=message&a=update&id=<?php echo $v['id']?>">修改</a></td>
+
+	</tr>
+	<?php } ?>
+	</table>
+	<?php } ?>
+	<div>
+	    <!-- <ul>
+	        <?php for($i=1; $i<=$pageNum;$i++) { ?>
+	        <li <?php if ($i == $p) {?> style="background: #ff0000" <?php } ?> ><a href="index.php?c=message&a=lists&p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+	        <?php } ?>
+	    </ul> -->
+	</div>
+    </div>
+</div>
+<?php randerTmp('footer'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,455 @@
+<?php
+php
+类型：
+int string array float object source bool null
+
+$arr = array('name'=>"maying");
+$a = '12\'3';
+$b = "1{$arr['name']}b2\"3";
+$i = $b;
+$c = false;
+$d = array();
+$e = new mysqli();
+$f = null
+$g = fopen('in.data')
+$h = 1.23
+$sqlCity = "
+select * from index_conf_city_relation inner join index_conf_vrshow on index_conf_city_relation.relation_id = index_conf_vrshow.id
+where city_id = {$cityId} and index_conf_city_relation.type = {$type} and 
+index_conf_city_relation.status = 1 and index_conf_vrshow.status = 1";
+
++ - * / % && || ! > < >= <= != == === !==   
+.= 
++= 
+-= 
+*= 
+%=
+/=
+
+++
+--
+
+$a = 10;
+echo ++$a; //11 
+$a++;
+echo $a;   //12 
+$b = $a++;
+echo $b++; //12
+echo $a;
+
+if else 
+
+if ($a === $b) {
+    
+} else {
+    
+}
+
+if ($a > 1) {
+    
+} elseif ($a >2 ) {
+    
+} 
+枚举
+$a = 10
+switch($a) {
+    case :
+        echo 10;
+        break;
+    case 20:
+    case 30:
+        echo  20;
+        break;
+}
+
+for($i=10;$<10;$i+=2) {
+    echo $i;
+}
+
+$i = 10;
+while($i<10) {
+    echo $i;
+    $i+=2;
+}
+
+do{
+    echo $i;
+    $i+=2;
+} while($i<10);
+
+$arr = array(0=>'maying',1=>'xiaoming');
+$arr = array('name'=>'maying','age'=>'26');
+
+
+$result = array( //关系型数据库 数据库，表，行，列
+    array('id'=>1, 'name'=>'','pid'=>0),
+    array('id'=>22, 'name'=>'','pid'=>0),
+    array('id'=>38, 'name'=>'','pid'=>0),
+);
+
+$result = array( //关系型数据库 数据库，表，行，列
+    1 => array('id'=>1, 'name'=>'','pid'=>0),
+    22 => array('id'=>22, 'name'=>'','pid'=>0),
+    38 => array('id'=>38, 'name'=>'','pid'=>0),
+);
+
+
+$result = array( //关系型数据库 数据库，表，行，列
+    array(
+         array('id'=>1, 'name'=>'','pid'=>0),
+         array('id'=>2, 'name'=>'','pid'=>0),
+    ),
+    array(
+         array('id'=>3, 'name'=>'','pid'=>0),
+    ),
+    array(
+         array('id'=>4, 'name'=>'','pid'=>0),
+    ),
+);
+
+
+foreach($result as $key=>$res) {
+    foreach ($res as $k=>$item) {
+        $tmp[$item['id']] = $item;
+    }
+}
+
+$aa = '3';
+$bb = '5';
+$id =  (int) $_GET['id']; // 123b   b123  12b3   1b23    
+$max = function_name($aa);
+function function_name ($a, $b=1) {
+    return ($a > $b) ? $a :$b;
+}
+
+
+$a = 10;
+function gmax(&$a) {
+    $a = $a +10;
+}
+gmax($a);
+echo $a;
+
+
+
+
+$arr = array()
+foreach () {
+
+}
+
+is_array()
+in_array('a', $array)
+array_pop(array)
+array_push(array, var)
+
+$a = (is_array($a)) ? $a : array();
+$b = (is_array($b)) ? $b : array();
+array_merge($a, $b);
+
+array_unshift(array, var)
+array_shift(array);
+array_search($a, $array)
+array_slice(array, 0,3);
+
+$ar = array('a','b','c','d','e','f','g'),
+$b = array('a','b','c'),
+array_splice(array, 0,0,array('i','g','h'))
+
+$b = array('a','b','c'),
+$c = array('b','c','d'),
+["a","b","c"]
+$b = array(0=>'a',2=>'c'),
+{0:"a",2:"c"}
+$b = array_values($b);
+["a","c"]
+
+
+array_keys(input)
+array_values(input)
+array_unique($array)
+count();
+current();
+next($)
+end();
+reset()
+
+array_combine($b, $c)
+array_diff($a, $b)
+array_intersect(array1, array2)
+array_flip(trans)
+array_reverse(array)
+shuffle(array)
+sort()
+ksort(array)
+rsort(array)
+asort(array)
+
+range(0,10)
+array_key_exists($key, $array)
+if (isset($array[$key])) {}
+
+explode(delimiter, string)    
+implode(glue, pieces)
+
+json_encode(value)
+json_decode(, true)
+
+serialize(value)
+unserialize(str)
+
+
+
+strlen(string)
+strstr() A  abc     abc
+strpos() a   abc    1
+
+stristr() A  abc     abc
+stripos() a   abc    1
+
+substr($str , 0, -1);
+trim($str, ' and ');
+ltrim()
+rtrim();
+
+str_replace('你', '我', $str);
+str_repeat('', multiplier)
+
+mb_substr($str, 0, 2, 'UTF-8');
+
+ucfirst(str)
+ucwords(str)
+strtolower(str)
+strtoupper(string)
+
+define(APP_NAME,"ke");
+echo APP_NAME;
+
+class ClassName {
+    public $name;
+    private $age;
+    protected $sex;
+
+    const TYPE_NAN = '1';
+    const TYPE_NV  = '2';
+
+    public static $sex = 1;
+
+
+    public final function say() {
+        self::$sex;
+        self::TYPE_NAN;
+        $this->name;
+        self::run();
+    }
+
+    public static function run() {
+        self::$sex;
+        self::TYPE_NAN;
+        //$this->name;
+        //$this->say
+    } 
+
+}
+
+class Child extends ClassName {
+    public $name;
+    private $age;
+    private $sex;
+    public function __construct() {
+
+    }
+    public function __destruct() {
+
+    }
+
+    public setValue($n, $v){
+        $this->$n = $v;
+    }
+
+    public function __set($n, $v) {
+        $this->$n = $v;
+    }
+
+    public function __get($n) {
+        return $this->$n;
+    } 
+
+}
+$obj = new Child();
+$obj->setValue('age', '123');
+$obj->setValue('sex', '1');
+$obj->age =123 ;
+$obj->sex =1;
+echo $obj->name = maying;
+
+__autoloda() {
+
+}
+
+$obj = new ClassName();
+$obj->say();
+
+ClassName::run();
+
+
+方法 和函数？
+
+
+
+
+array(
+    1 => array(
+        'id' => 1,
+        'name' ="maying".
+        'card' => 1,
+        'orgCard' ="maying".
+    ),
+    2 => array(
+        'id' => 2,
+        'name' ="maying".
+         'card' => 1,
+        'orgCard' ="maying".
+    )
+)
+
+array(
+    1 => array(
+        'card' => 1,
+        'orgCard' ="maying".
+    ),
+    2 => array(
+        'card' => 1,
+        'orgCard' ="maying".
+    )
+)
+
+
+
+post 
+get 
+ajax
+api  地址  访问方式 入参 出参 json 
+
+curl
+fopen 
+fwrite 
+fread 
+file 
+file_get_contents(filename)
+file_put_contents(filename, data)
+mkdir 
+rmdir(dirname)
+递归删除所有文件
+
+
+error 
+warning
+notice 
+error_log('',3,'/data/')
+try {
+    throw new Exception("Error Processing Request", 1);
+    
+} catch(Exception $e) {
+
+}
+
+new mysqli 
+query()
+fetch_array()
+fetch_all(MYSQLI_ASSOC)
+
+mvc 
+数组处理
+递归
+引用
+
+正则
+
+sesssion 
+cookie  
+
+ceil()
+rand(0,1000);
+round(4.6)
+
+
+
+
+
+
+
+
+
+
+
+
+mysql
+
+mysql -h localhost -u root -P 3306 -p
+show databases;
+use message;
+show tables;
+create database message;
+use message;
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `classify_id` int(11) NOT NULL DEFAULT '0',
+  `image` varchar(200) NOT NULL DEFAULT '',
+  `content` varchar(1000) NOT NULL DEFAULT '',
+  `createtime` int(11) NOT NULL DEFAULT '0',
+  `updatetime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+alter table message drop content;
+alter table message change image image varchar(300) not null default '' comment '图片'；
+
+alter table network3 rename New_network3;
+drop table New_network3;
+
+drop database students_info;
+
+mysqladmin -r root -p password 新密码
+
+
+insert into message (user_id,classify_id,content) values (1,2,'123qwe'),(1,2,'123qwe') ,(1,2,'123qwe')  
+delete from message where id = 1;
+update message set user_id =11 where id = 3;
+select id,user_id from message where id =1
+
+查看执行计划
+explain select id,user_id from message where id =1
+
+
+http://www.baidu.com 
+dns  host->ip 
+ip:80
+nginx index.php
+php-fpm   127.0.0.1:9000   
+mysql  127.0.0.1:3306
+redis  127.0.0.1:6379
+
+
+
+linux + nginx + php 
+
+nginx 
+listen 80
+index.php?
+fastcgi_pass 127.0.0.1:9000
+
+php_fpm
+php.ini
+listen 127.0.0.1:9000
+
+
+
+
+lamp
+lnmp
+
+linux
+apache | nginx可口可乐·     -04

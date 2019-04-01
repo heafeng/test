@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function login (){
+			$.ajax({
+				url : "login",
+				method : "post",
+				data : {
+					id : $().val(),
+					pwd : $().val(),
+				},
+				type : "json",
+				success : function(data) {
+					alert(data);
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

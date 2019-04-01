@@ -1,0 +1,21 @@
+<?php randerTmp('header'); ?>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h1 class="page-header">新增留言</h1>
+    <form action="index.php?c=message&a=save" method="post" enctype="multipart/form-data">
+    	<div class="form-group">
+                <label for="exampleInputEmail1">用户名：</label>
+                <input type="text" name="username" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="exampleInputFile">图片</label>
+                <input type="file" name="file">
+                <p class="help-block">请上传图片 </p>
+        </div>
+        <div  class="form-group">
+                <label for="exampleInputEmail1">留言：</label>
+                <textarea name="content" class="form-control"></textarea><br>
+            </div>
+	<input type="submit" name="" value="提交"  class="btn btn-default"> 
+</form>   
+</div>
+<?php randerTmp('footer'); ?>

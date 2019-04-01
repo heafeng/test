@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>简历</title>
+	<script type="text/javascript">
+	function validate_required(field,alerttxt)
+	{
+	with (field)
+	  {
+	  if (value==null||value=="")
+	    {alert(alerttxt);return false}
+	  else {return true}
+	  }
+	}
+
+	function validate_form(thisform)
+	{
+	with (thisform)
+	  {
+	  if (validate_required(email,"Email must be filled out!")==false)
+	    {email.focus();return false}
+	  }
+	}
+	</script>
+</head>
+<body>
+	<form>
+	<div class="text" style="text-align: center;">
+		简历
+	</div>
+	<div>
+		姓名:<input type="text" name="name">
+	</div>
+	<div>
+		生日:<input type="date" name="">
+	</div>
+	<div>
+		性别:男<input type="radio" name="x" /> 女<input type="radio" name="x" />
+	</div>
+	<div>
+		爱好:<br>
+		<label>
+			篮球<input type="checkbox" name="aihao" value="" />
+		</label>
+		<label>
+			足球<input type="checkbox" name="aihao" value="" />
+		</label>
+		<label>
+			羽毛球<input type="checkbox" name="aihao" value="" />
+		</label>
+		<label>
+			看书<input type="checkbox" name="aihao" value="" />
+		</label>
+	</div>
+	<div>
+		籍贯： <select>
+			<option>吉林</option>
+			<option>贵州</option>
+			<option>北京</option>
+			<option>沈阳</option>
+			<option>四川</option>
+			<option>重庆</option>
+		</select>
+	</div>
+	<div>
+		学习经历:<br>
+		<textarea rows="15" cols="30"></textarea>
+	</div>
+	<input type="submit" name="" value="提交" class="btn btn-default">
+	<input type="reset" name="" value="重置" class="btn btn-default">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>北华大学</title>
+ 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="js/squery-2.1.1js"></script>
+	<script>
+		var x ="";
+		$(function(){
+			$("button").click(function(){
+				x + =$(this).text();
+			});
+		});
+		function sum(){
+			alert(eval(x));
+		}
+	</script>
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+	<button>4</button>
+	<button>5</button>
+	<button>6</button>
+	<button>7</button>
+	<button>8</button>
+	<button>9</button>
+	<button>0</button>
+	<button>+</button>
+	<button>-</button>
+	<button>*</button>
+	<button>/</button>
+	<input type="button" value="计算" onclick="sum()" />
+</body>
+</html>
