@@ -66,12 +66,14 @@ class Word extends Controller
 		return $this->fetch();
 	}
 	public function delete($id) {
-		
-		$words=Db::table('word')->delete($id);
-		if($words){
-				$this->success('删除成功',url('lit'));
-			}else{
-				$this->error('删除失败');
-			}
+
+		$word=new WordAdmin();
+		$words=$word->delWords($id);
+		// $words=Db::table('word')->delete($id);
+		if($words ){
+			$this->success('删除成功',url('lit'));
+		}else{
+			$this->error('删除失败');
+		}
 	}
 }

@@ -18,4 +18,11 @@ class Word extends Model
 	public function getwords() {
 		return $this::paginate(5);
 	}
+	public function delWords($id) {
+		$info=$this->destroy($id);
+		return $info;
+	}
+	public function updateWords() {
+		
+	}
 }
